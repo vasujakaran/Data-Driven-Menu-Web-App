@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body background="https://www.queenstownnz.co.nz/assets/Tourism-Operators/images/no5-church-lane-queenstown-1.jpg">
+
+<h1 style="color: green" >Edit {{ restaurant.name }}</h1>
+
+<form action="{{ url_for('edit_restaurant', restaurant_id=restaurant.id) }}" method="post">
+    <label style="color: red" for="name">Name</label>
+    <input id="name" type="text" name="name" value="{{ restaurant.name }}">
+    <label style="color: red" for="address">Address</label>
+    <input type="text" id="address" name="address" value="{{ restaurant.address }}">
+    <input type="submit" value="Update">
+</form>
+
+</body>
+</html>

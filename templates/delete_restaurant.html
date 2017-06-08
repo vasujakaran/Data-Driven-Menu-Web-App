@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body background= "https://cdn.shopify.com/s/files/1/0664/4059/t/3/assets/slideshow_3.jpg?9342382903280430450 ">
+
+<h1 style="color:  #eaeded ">Delete {{ restaurant.name }} ????</h1>
+
+<form action="{{ url_for('delete_restaurant', restaurant_id=restaurant.id) }}" method="post">
+    <input type="submit" value="Delete">
+</form>
+
+</body>
+</html>

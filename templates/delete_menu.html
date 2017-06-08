@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body background="https://cdn.shopify.com/s/files/1/0216/6478/t/19/assets/home_slideshow_2.jpg?10479349718743315186">
+
+<h1 style="color: #b03a2e">{{ restaurant.name }}</h1>
+<address style="color: #b03a2e">{{ restaurant.address }}</address>
+
+<h2 style="color:   #b9770e  ">Delete {{ item.name }}</h2>
+
+<form action="{{ url_for('delete_menu', menu_id=item.id, restaurant_id=restaurant.id) }}" method="post">
+    <input type="submit" value="Delete">
+</form>
+
+</body>
+</html>

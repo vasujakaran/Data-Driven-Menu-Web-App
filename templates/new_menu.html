@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body background="https://www.queenstownnz.co.nz/assets/Tourism-Operators/images/20482.jpg">
+
+<h1 style="color:  yellow">{{ restaurant.name }}</h1>
+<address style="color:  yellow">{{ restaurant.address }}</address>
+
+<h2 style="color: #e74c3c ">Enter New Menu</h2>
+
+<form action="{{ url_for('new_menu', restaurant_id=restaurant.id) }}" method="post">
+
+    <label style="color: #e74c3c " for="name">Name</label>
+    <input id="name" type="text" name="name">
+
+    <label style="color: #e74c3c " for="price">Price</label>
+    <input type="text" id="price" name="price">
+<br>
+
+    <label style="color: #e74c3c " for="course">Course :</label>
+    <p style="color: white "><input type="radio" name="course" value="Appetizer" checked>Appetizer</p>
+    <p style="color: white "><input type="radio" name="course" value="Entree">Entree</p>
+    <p style="color: white "><input type="radio" name="course" value="Dessert">Dessert</p>
+    <p style="color: white "><input type="radio" name="course" value="Beverage">Beverage</p>
+
+    <label style="color: #e74c3c " for="description">Description</label>
+    <input type="text" id="description" name="description">
+
+    <input type="submit" value="Create">
+</form>
+
+</body>
+</html>
