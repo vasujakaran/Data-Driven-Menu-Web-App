@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, jsonify
 from sqlalchemy.orm.exc import NoResultFound
-from database_setup import Base, Restaurant, MenuItem
+from models.database_setup import Base
+from models.restaurant import Restaurant
+from models.menuitem import MenuItem
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
