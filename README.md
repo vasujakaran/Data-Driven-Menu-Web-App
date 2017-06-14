@@ -10,6 +10,7 @@ Requirements
 •	Flask
 •	sqlalchemy
 •	Terminal or command prompt
+
 How To run the application
 Open up your terminal or command prompt and run the command below:
 •	$ python finalproject.py
